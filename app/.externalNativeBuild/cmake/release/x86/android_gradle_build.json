@@ -1,0 +1,97 @@
+
+{
+	"buildFiles" : 
+	[
+		"/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/CMakeLists.txt"
+	],
+	"cleanCommands" : 
+	[
+		"/Users/lio/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/lio/StudioProjects/SFML_Template/app/.externalNativeBuild/cmake/release/x86 --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"my-app-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "my-app",
+			"buildCommand" : "/Users/lio/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/lio/StudioProjects/SFML_Template/app/.externalNativeBuild/cmake/release/x86 --target my-app",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=/Users/lio/Library/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/lio/Library/Android/sdk/ndk-bundle/sysroot  -Dmy_app_EXPORTS -I/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/../../../../sfml/include -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sources/cxx-stl/stlport/stlport -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gabi++/include  -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security   -std=gnu++11 -Wall -Werror -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/main.cpp",
+					"workingDirectory" : "/Users/lio/StudioProjects/SFML_Template/app/.externalNativeBuild/cmake/release/x86"
+				}
+			],
+			"output" : "/Users/lio/StudioProjects/SFML_Template/app/build/intermediates/cmake/release/obj/x86/libmy-app.so",
+			"toolchain" : "1937170646060807527"
+		},
+		"openal-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "openal",
+			"buildType" : "debug",
+			"output" : "/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/../../../../sfml/lib/x86/libopenal.so",
+			"toolchain" : "1937170646060807527"
+		},
+		"sfml-activity-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "sfml-activity",
+			"buildType" : "debug",
+			"output" : "/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/../../../../sfml/lib/x86/libsfml-activity.so",
+			"toolchain" : "1937170646060807527"
+		},
+		"sfml-audio-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "sfml-audio",
+			"buildType" : "debug",
+			"output" : "/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/../../../../sfml/lib/x86/libsfml-audio.so",
+			"toolchain" : "1937170646060807527"
+		},
+		"sfml-graphics-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "sfml-graphics",
+			"buildType" : "debug",
+			"output" : "/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/../../../../sfml/lib/x86/libsfml-graphics.so",
+			"toolchain" : "1937170646060807527"
+		},
+		"sfml-main-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "sfml-main",
+			"buildType" : "debug",
+			"output" : "/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/../../../../sfml/lib/x86/libsfml-main.a",
+			"toolchain" : "1937170646060807527"
+		},
+		"sfml-system-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "sfml-system",
+			"buildType" : "debug",
+			"output" : "/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/../../../../sfml/lib/x86/libsfml-system.so",
+			"toolchain" : "1937170646060807527"
+		},
+		"sfml-window-Debug-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "sfml-window",
+			"buildType" : "debug",
+			"output" : "/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/../../../../sfml/lib/x86/libsfml-window.so",
+			"toolchain" : "1937170646060807527"
+		}
+	},
+	"toolchains" : 
+	{
+		"1937170646060807527" : 
+		{
+			"cCompilerExecutable" : "/Users/lio/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/lio/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+		}
+	}
+}

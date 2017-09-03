@@ -1,0 +1,97 @@
+
+{
+	"buildFiles" : 
+	[
+		"/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/CMakeLists.txt"
+	],
+	"cleanCommands" : 
+	[
+		"/Users/lio/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/lio/StudioProjects/SFML_Template/app/.externalNativeBuild/cmake/release/armeabi --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"my-app-Debug-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "my-app",
+			"buildCommand" : "/Users/lio/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/lio/StudioProjects/SFML_Template/app/.externalNativeBuild/cmake/release/armeabi --target my-app",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=armv5te-none-linux-androideabi --gcc-toolchain=/Users/lio/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/lio/Library/Android/sdk/ndk-bundle/sysroot  -Dmy_app_EXPORTS -I/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/../../../../sfml/include -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sources/cxx-stl/stlport/stlport -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gabi++/include  -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security   -std=gnu++11 -Wall -Werror -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/main.cpp",
+					"workingDirectory" : "/Users/lio/StudioProjects/SFML_Template/app/.externalNativeBuild/cmake/release/armeabi"
+				}
+			],
+			"output" : "/Users/lio/StudioProjects/SFML_Template/app/build/intermediates/cmake/release/obj/armeabi/libmy-app.so",
+			"toolchain" : "1937170646060807527"
+		},
+		"openal-Debug-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "openal",
+			"buildType" : "debug",
+			"output" : "/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/../../../../sfml/lib/armeabi/libopenal.so",
+			"toolchain" : "1937170646060807527"
+		},
+		"sfml-activity-Debug-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "sfml-activity",
+			"buildType" : "debug",
+			"output" : "/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/../../../../sfml/lib/armeabi/libsfml-activity.so",
+			"toolchain" : "1937170646060807527"
+		},
+		"sfml-audio-Debug-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "sfml-audio",
+			"buildType" : "debug",
+			"output" : "/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/../../../../sfml/lib/armeabi/libsfml-audio.so",
+			"toolchain" : "1937170646060807527"
+		},
+		"sfml-graphics-Debug-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "sfml-graphics",
+			"buildType" : "debug",
+			"output" : "/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/../../../../sfml/lib/armeabi/libsfml-graphics.so",
+			"toolchain" : "1937170646060807527"
+		},
+		"sfml-main-Debug-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "sfml-main",
+			"buildType" : "debug",
+			"output" : "/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/../../../../sfml/lib/armeabi/libsfml-main.a",
+			"toolchain" : "1937170646060807527"
+		},
+		"sfml-system-Debug-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "sfml-system",
+			"buildType" : "debug",
+			"output" : "/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/../../../../sfml/lib/armeabi/libsfml-system.so",
+			"toolchain" : "1937170646060807527"
+		},
+		"sfml-window-Debug-armeabi" : 
+		{
+			"abi" : "armeabi",
+			"artifactName" : "sfml-window",
+			"buildType" : "debug",
+			"output" : "/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/../../../../sfml/lib/armeabi/libsfml-window.so",
+			"toolchain" : "1937170646060807527"
+		}
+	},
+	"toolchains" : 
+	{
+		"1937170646060807527" : 
+		{
+			"cCompilerExecutable" : "/Users/lio/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/lio/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+		}
+	}
+}

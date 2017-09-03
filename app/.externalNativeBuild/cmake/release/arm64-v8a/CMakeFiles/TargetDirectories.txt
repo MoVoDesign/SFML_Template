@@ -1,0 +1,4 @@
+/Users/lio/StudioProjects/NativeActivityCustomC/app/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/lio/StudioProjects/NativeActivityCustomC/app/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Users/lio/StudioProjects/NativeActivityCustomC/app/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/my-app.dir
+/Users/lio/StudioProjects/NativeActivityCustomC/app/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/custom_native_app_glue.dir

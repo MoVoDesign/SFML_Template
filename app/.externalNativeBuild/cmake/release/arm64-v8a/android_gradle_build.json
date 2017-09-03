@@ -1,0 +1,60 @@
+
+{
+	"buildFiles" : 
+	[
+		"/Users/lio/StudioProjects/NativeActivityCustomC/app/src/main/cpp/CMakeLists.txt"
+	],
+	"cFileExtensions" : [ "c" ],
+	"cleanCommands" : 
+	[
+		"/Users/lio/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/lio/StudioProjects/NativeActivityCustomC/app/.externalNativeBuild/cmake/release/arm64-v8a --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"custom_native_app_glue-Release-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "custom_native_app_glue",
+			"buildCommand" : "/Users/lio/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/lio/StudioProjects/NativeActivityCustomC/app/.externalNativeBuild/cmake/release/arm64-v8a --target custom_native_app_glue",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/Users/lio/Library/Android/sdk/ndk-bundle/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/lio/Library/Android/sdk/ndk-bundle/sysroot   -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC      -c ",
+					"src" : "/Users/lio/StudioProjects/NativeActivityCustomC/app/src/main/cpp/custom_native_app_glue.c",
+					"workingDirectory" : "/Users/lio/StudioProjects/NativeActivityCustomC/app/.externalNativeBuild/cmake/release/arm64-v8a"
+				}
+			],
+			"output" : "/Users/lio/StudioProjects/NativeActivityCustomC/app/.externalNativeBuild/cmake/release/arm64-v8a/libcustom_native_app_glue.a",
+			"toolchain" : "1937170646060807527"
+		},
+		"my-app-Release-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "my-app",
+			"buildCommand" : "/Users/lio/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/lio/StudioProjects/NativeActivityCustomC/app/.externalNativeBuild/cmake/release/arm64-v8a --target my-app",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/Users/lio/Library/Android/sdk/ndk-bundle/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/lio/Library/Android/sdk/ndk-bundle/sysroot  -Dmy_app_EXPORTS -I/Users/lio/Library/Android/sdk/ndk-bundle/sources/android/native_app_glue -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/include -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security   -std=gnu++11 -Wall -Werror -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/Users/lio/StudioProjects/NativeActivityCustomC/app/src/main/cpp/main.cpp",
+					"workingDirectory" : "/Users/lio/StudioProjects/NativeActivityCustomC/app/.externalNativeBuild/cmake/release/arm64-v8a"
+				}
+			],
+			"output" : "/Users/lio/StudioProjects/NativeActivityCustomC/app/build/intermediates/cmake/release/obj/arm64-v8a/libmy-app.so",
+			"toolchain" : "1937170646060807527"
+		}
+	},
+	"toolchains" : 
+	{
+		"1937170646060807527" : 
+		{
+			"cCompilerExecutable" : "/Users/lio/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/lio/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+		}
+	}
+}

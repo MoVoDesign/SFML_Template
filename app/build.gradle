@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion = 25
+    buildToolsVersion = '25.0.2'
+
+    defaultConfig {
+        applicationId = 'sfml.example.myappname' // same as in AndroidManifest.xml
+        minSdkVersion 14
+        targetSdkVersion  25
+        ndk {
+            abiFilters 'x86', 'armeabi', 'armeabi-v7a' //, 'arm64-v8a', 'x86_64',
+        }
+        // Set up parameters for jni build, including cmake command
+        // line ones. For complete list of parameters, refer to:
+        // developer.android.com/ndk/guides/cmake.html#variables
+        externalNativeBuild {
+            cmake {
+                arguments '-DANDROID_PLATFORM=android-14',
+                        '-DANDROID_TOOLCHAIN=clang', '-DANDROID_STL=stlport_shared'
+                //abiFilters ''
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            jniDebuggable true // dbg
+            debuggable true // dbg
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+        }
+    }
+    // Inform the location of the top level CMakeLists.txt
+    // File path is relative to the hosting directory of this build.gradle file
+    externalNativeBuild {
+        cmake {
+            path 'src/main/cpp/CMakeLists.txt'
+        }
+    }
+    // If you want Gradle to package prebuilt native libraries
+    // with your APK (you do!), modify the default source set configuration
+    // to include the directory of your prebuilt .so files as follows.
+    // note: put the sfml libs in MyProject/sfml/lib/(architecture)/libsfml(...).so
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['../sfml/lib/']
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+}

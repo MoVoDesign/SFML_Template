@@ -1,0 +1,3 @@
+/Users/lio/StudioProjects/SFML_Template/app/.externalNativeBuild/cmake/release/x86/CMakeFiles/edit_cache.dir
+/Users/lio/StudioProjects/SFML_Template/app/.externalNativeBuild/cmake/release/x86/CMakeFiles/rebuild_cache.dir
+/Users/lio/StudioProjects/SFML_Template/app/.externalNativeBuild/cmake/release/x86/CMakeFiles/my-app.dir

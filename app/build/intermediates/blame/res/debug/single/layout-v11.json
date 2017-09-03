@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/lio/StudioProjects/SFML_Template/app/build/intermediates/res/merged/debug/layout-v11/notification_media_action.xml",
+        "source": "/Users/lio/.android/build-cache/e243890623a5bffd1b0ca5c046c050a56e054924/output/res/layout-v11/notification_media_action.xml"
+    },
+    {
+        "merged": "/Users/lio/StudioProjects/SFML_Template/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow.xml",
+        "source": "/Users/lio/.android/build-cache/e243890623a5bffd1b0ca5c046c050a56e054924/output/res/layout-v11/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/lio/StudioProjects/SFML_Template/app/build/intermediates/res/merged/debug/layout-v11/notification_media_cancel_action.xml",
+        "source": "/Users/lio/.android/build-cache/e243890623a5bffd1b0ca5c046c050a56e054924/output/res/layout-v11/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/Users/lio/StudioProjects/SFML_Template/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow_custom.xml",
+        "source": "/Users/lio/.android/build-cache/e243890623a5bffd1b0ca5c046c050a56e054924/output/res/layout-v11/notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "/Users/lio/StudioProjects/SFML_Template/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_custom.xml",
+        "source": "/Users/lio/.android/build-cache/e243890623a5bffd1b0ca5c046c050a56e054924/output/res/layout-v11/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/Users/lio/StudioProjects/SFML_Template/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media.xml",
+        "source": "/Users/lio/.android/build-cache/e243890623a5bffd1b0ca5c046c050a56e054924/output/res/layout-v11/notification_template_big_media.xml"
+    }
+]

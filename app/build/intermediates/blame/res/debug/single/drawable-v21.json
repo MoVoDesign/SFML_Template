@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/lio/StudioProjects/SFML_Template/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/Users/lio/.android/build-cache/e243890623a5bffd1b0ca5c046c050a56e054924/output/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/lio/StudioProjects/SFML_Template/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/lio/.android/build-cache/e243890623a5bffd1b0ca5c046c050a56e054924/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Users/lio/StudioProjects/SFML_Template/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/lio/.android/build-cache/e243890623a5bffd1b0ca5c046c050a56e054924/output/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/lio/StudioProjects/SFML_Template/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/lio/.android/build-cache/e243890623a5bffd1b0ca5c046c050a56e054924/output/res/drawable-v21/abc_btn_colored_material.xml"
+    }
+]

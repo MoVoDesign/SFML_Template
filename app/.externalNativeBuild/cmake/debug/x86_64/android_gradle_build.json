@@ -1,0 +1,78 @@
+
+{
+	"buildFiles" : [ "/Users/lio/StudioProjects/NA_SFML_2/app/src/main/cpp/CMakeLists.txt" ],
+	"cleanCommands" : 
+	[
+		"/Users/lio/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/lio/StudioProjects/NA_SFML_2/app/.externalNativeBuild/cmake/debug/x86_64 --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"my-app-Debug-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "my-app",
+			"buildCommand" : "/Users/lio/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/lio/StudioProjects/NA_SFML_2/app/.externalNativeBuild/cmake/debug/x86_64 --target my-app",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=/Users/lio/Library/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/lio/Library/Android/sdk/ndk-bundle/sysroot  -Dmy_app_EXPORTS -I/Users/lio/StudioProjects/NA_SFML_2/app/src/main/cpp/SFMLHack -I/usr/local/include/sfml -I/Users/lio/StudioProjects/NA_SFML_2/app/src/main/cpp/../../../../sfml/include -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sources/cxx-stl/stlport/stlport -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gabi++/include  -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security   -std=gnu++11 -Wall -Werror -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/Users/lio/StudioProjects/NA_SFML_2/app/src/main/cpp/main.cpp",
+					"workingDirectory" : "/Users/lio/StudioProjects/NA_SFML_2/app/.externalNativeBuild/cmake/debug/x86_64"
+				}
+			],
+			"output" : "/Users/lio/StudioProjects/NA_SFML_2/app/build/intermediates/cmake/debug/obj/x86_64/libmy-app.so",
+			"toolchain" : "1937170646060807527"
+		},
+		"sfml-activity-Debug-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "sfml-activity",
+			"buildType" : "debug",
+			"output" : "/Users/lio/StudioProjects/NA_SFML_2/app/src/main/cpp/../../../../sfml/lib/x86_64/libsfml-activity.so",
+			"toolchain" : "1937170646060807527"
+		},
+		"sfml-graphics-Debug-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "sfml-graphics",
+			"buildType" : "debug",
+			"output" : "/Users/lio/StudioProjects/NA_SFML_2/app/src/main/cpp/../../../../sfml/lib/x86_64/libsfml-graphics.so",
+			"toolchain" : "1937170646060807527"
+		},
+		"sfml-main-Debug-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "sfml-main",
+			"buildType" : "debug",
+			"output" : "/Users/lio/StudioProjects/NA_SFML_2/app/src/main/cpp/../../../../sfml/lib/x86_64/libsfml-main.a",
+			"toolchain" : "1937170646060807527"
+		},
+		"sfml-system-Debug-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "sfml-system",
+			"buildType" : "debug",
+			"output" : "/Users/lio/StudioProjects/NA_SFML_2/app/src/main/cpp/../../../../sfml/lib/x86_64/libsfml-system.so",
+			"toolchain" : "1937170646060807527"
+		},
+		"sfml-window-Debug-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "sfml-window",
+			"buildType" : "debug",
+			"output" : "/Users/lio/StudioProjects/NA_SFML_2/app/src/main/cpp/../../../../sfml/lib/x86_64/libsfml-window.so",
+			"toolchain" : "1937170646060807527"
+		}
+	},
+	"toolchains" : 
+	{
+		"1937170646060807527" : 
+		{
+			"cCompilerExecutable" : "/Users/lio/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/lio/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+		}
+	}
+}
