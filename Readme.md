@@ -5,28 +5,50 @@ You'll find here the detailled steps to **build SFML** and use it in an **Androi
 
 ## Build SFML 
 
+### get the basics 
+
 - Get **JDK** [here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and install.
 - Get **Android Studio** [here](https://developer.android.com/studio/index.html), Install and Run. The SDK will be placed in `$HOME/Library/Android/sdk/`
 - Start and Add more packages (LLDB, NDK, CMake, ...) see <https://developer.android.com/ndk/guides/index.html>
 - *note: all this will take a lot of space, be ready for it.*
 - AndroidStudio will create `$HOME/StudioProjects`
-- open **Terminal**, `cd $HOME/StudioProjects/`
-- get the SFML source `git clone https://github.com/SFML/SFML.git`
-- as a result you get: `$HOME/StudioProjects/SFML/...`
-- set a *SFML variable* pointing to this place `SFML=$HOME/StudioProjects/SFML` (you could also add it to `$HOME/.profile` and source it `source $HOME/.profile`
-- go to the SFML folder `cd $SFML` and create a *build* folder `mkdir build`
-- create an architecture folder `mkdir x86` (to use the emulator) and go there `cd x86`
-- create Makefile `cmake -DANDROID_ABI=x86 -DCMAKE_TOOLCHAIN_FILE=$SFML/cmake/toolchains/android.toolchain.cmake -DCMAKE_FIND_FRAMEWORK="NEVER" -DANDROID_STL=stlport_shared $SFML`
-	- Note: download **CMake** [here](https://cmake.org/download/) if needed and add it to the `PATH` in your `.profile` like so: `PATH=$PATH:/Applications/CMake.app/Contents/bin`, `source $HOME/.profile`
-	- Note: `CMAKE_FIND_FRAMEWORK="NEVER"` from findSFML.cmake, to avoid looking for the frameworks if you have them installed on your machine
-	- Note: use `ANDROID_STL=stlport_shared` when you encounter `fatal error: ostream: No such file or directory “#include <ostream>”`
-- build sfml `make`
+- get Android **NDK-r12b** [here](https://developer.android.com/ndk/downloads/older_releases.html)(we'll need it for SFML, thanks to [Alia5](https://en.sfml-dev.org/forums/index.php?topic=22445.0) for the tip!
+- unpack it in `$HOME/Library/Android` rename the folder `ndk_r12b`
+- if you need **CMake** get it [here](https://cmake.org/download/). Then add it to the `PATH` in your `.profile` using *nano* or *vi*. `PATH=$PATH:/Applications/CMake.app/Contents/bin`, finally `source $HOME/.profile`
 
-now you can build SFML for for other architectures. You'll probably need `armeabi` and `armeabi-v7a`. Create subfolders in `$SFML/build` for each.
-	
-- armeabi `cmake -DANDROID_ABI=armeabi -DCMAKE_TOOLCHAIN_FILE=$SFML/cmake/toolchains/android.toolchain.cmake -DCMAKE_FIND_FRAMEWORK="NEVER" -DANDROID_STL=stlport_shared $SFML` and `make`
-- armeabi-v7a `cmake -DANDROID_ABI=armeabi-v7a -DCMAKE_TOOLCHAIN_FILE=$SFML/cmake/toolchains/android.toolchain.cmake -DCMAKE_FIND_FRAMEWORK="NEVER" -DANDROID_STL=stlport_shared $SFML` and `make`
-- and so on...
+### Let's proceed to building SFML
+
+- open **Terminal**, `cd $HOME/StudioProjects/`
+- get **SFML** `git clone https://github.com/SFML/SFML.git`
+- as a result you get: `$HOME/StudioProjects/SFML/...`
+- set a *SFML* variable: `SFML=$HOME/StudioProjects/SFML`
+- go to the SFML folder `cd $SFML` and create a *build* folder `mkdir build`, then `cd build`
+
+### create the *x86* libs
+
+- create an architecture folder `mkdir x86` (to use the emulator) and go there `cd x86`
+- create the makefile using cmake `	cmake -DANDROID_ABI=x86 -DCMAKE_TOOLCHAIN_FILE=$SFML/cmake/toolchains/android.toolchain.cmake -DANDROID_NDK=$HOME/Library/Android/ndk_r12b -DCMAKE_FIND_FRAMEWORK="NEVER" -DANDROID_STL=c++_shared $SFML`
+- build SFML libs for architecture **x86** `make`
+
+### create the *armeabiXXXX* libs
+
+repeat what you did for the **x86** libs for **armeabi** and **armeabi-v7a** architectures
+
+	cd $SFML/build
+	mkdir armeabi
+	cd armeabi	
+
+	cmake -DANDROID_ABI=armeabi -DCMAKE_TOOLCHAIN_FILE=$SFML/cmake/toolchains/android.toolchain.cmake -DANDROID_NDK=$HOME/Library/Android/ndk_r12b -DCMAKE_FIND_FRAMEWORK="NEVER" -DANDROID_STL=c++_shared $SFML
+	make
+
+and finally
+
+	cd $SFML/build
+	mkdir armeabi-v7a
+	cd armeabi-v7a	
+
+	cmake -DANDROID_ABI=armeabi-v7a -DCMAKE_TOOLCHAIN_FILE=$SFML/cmake/toolchains/android.toolchain.cmake -DANDROID_NDK=$HOME/Library/Android/ndk_r12b -DCMAKE_FIND_FRAMEWORK="NEVER" -DANDROID_STL=c++_shared $SFML
+	make
 	
 when this is done, put all the libs created somewhere you can find them 
 
@@ -43,14 +65,11 @@ also add the extlibsthat aren't statically linked to the SFML libs (the .so).
 
 you're ready for the second part... build an App.
 
-
-when this is done you are ready to build your SFML App
-
 ## Build your SFML App
 
-If you want to use the **Template** you can skip this but it's good practice...
+If you want to use the **Template** you can skip this. I would advise you to try it the long way first (it's good practice).
 
-Let's start from scratch. Start **Android Studio** and create a **new project** by **importing a sample**. The one you want is **NDK/NativeActivity**. Name your project and ... wait.
+So, from scratch: Start **Android Studio** and create a **new project** by **importing a sample**. The one you want is **NDK/NativeActivity**. Name your project and ... wait.
 You might be requested to update settings to use a newer version of Gradle: do so.
 
 we'll have to change 3 files to make it work:
@@ -72,8 +91,9 @@ Then you want to tell SFMLActivity where to find `int main(int argc, char *argv[
 	<!-- Tell sfml-activity (see SFML_Activity.cpp) the name of our app.so -->
 	<meta-data android:name="sfml.app.lib_name"
 	  android:value="my-app" /><!-- match it to CMakeLists.txt -->
+done.
 
-here's a complete exemple for your reference:
+here's a complete example for your reference:
 
 	<?xml version="1.0" encoding="utf-8"?>
 	<!-- BEGIN_INCLUDE(manifest) -->
@@ -115,7 +135,7 @@ here's a complete exemple for your reference:
 
 ## build.gradle (Module: app)
 
-Before doing anything here, let's copy the **sfml libs** inside your project. Android Studio seems a bit *idiotic* about it. Your project folder should look like this:
+Before doing anything here, copy the **sfml libs** inside your project. Android Studio seems a bit *daft* about it. Your project folder should look like this:
 
 	StudioProjects/MyProject/
 		app/
@@ -123,22 +143,33 @@ Before doing anything here, let's copy the **sfml libs** inside your project. An
 		gradle/
 		sfml/
 			include/
-				FLAC/
+				FLAC/stuff.h
 				...
 				SFML/
 				...
 				Vorbis/
 			lib/
-				armeabi/
+				armeabi/stuff.so
 				armeabi-v7a/
 				x86/
 				mips/
 		
 
 you must now change the **App Bundle name** in `defaultConfig { applicationId = '...' }` to the same value you've defined earlier in the **AndroidManisfest.xml** file.
-Next, find `-DANDROID_STL=gnustl_static` and replace with `-DANDROID_STL=stlport_shared`.
 
-Now to tell gradle to copy our libs where they can be found by the App, add this block right after `externalNativeBuild { ... }`
+Next, let's specify the **STL** used and the **cppFlags**
+
+	defaultConfig {
+	  ...
+	  externalNativeBuild {
+        cmake {
+            cppFlags "-std=c++11 -fexceptions -frtti"
+            arguments '-DANDROID_STL=c++_shared'
+        }
+	  }
+	}
+        
+Now to tell gradle to copy our libs where they can be found by the App, add this block right after `externalNativeBuild { cmake { path 'src/main/cpp/CMakeLists.txt' } }`
 	
 	// If you want Gradle to package prebuilt native libraries
 	// with your APK (you do!), modify the default source set configuration
@@ -150,6 +181,7 @@ Now to tell gradle to copy our libs where they can be found by the App, add this
 	    }
 	} 
 
+done.
 
 ## CmakeLists.txt
 
@@ -157,10 +189,7 @@ What you want to do here is to specify where the libs are and what to build depe
 
 
 	cmake_minimum_required(VERSION 3.4.1)
-	
-	set(${CMAKE_C_FLAGS}, "${CMAKE_C_FLAGS}")
-	set(${CMAKE_CPP_FLAGS}, "${CMAKE_CPP_FLAGS}")
-	
+		
 	set(sfml_dir ${CMAKE_SOURCE_DIR}/../../../../sfml)
 	set(sfml_lib ${sfml_dir}/lib/${ANDROID_ABI})
 	set(sfml_include ${sfml_dir}/include)
@@ -173,8 +202,7 @@ What you want to do here is to specify where the libs are and what to build depe
 shared lib will also be tucked into APK and sent to target (refer to `app/build.gradle`, `jniLibs` section for that purpose). We use 
 `${ANDROID_ABI}` hereto determine on the fly which architecture to link to (useful if like me you don't have an android device and want to use the simulator)
 
-then we indicate where all our libs are:
-	
+Next we define where all our libs are:
 	
 	#--- ADD LIBS: prebuilt libraries (3rd party)
 	add_library(sfml-main STATIC IMPORTED)
@@ -202,9 +230,6 @@ then we indicate where all our libs are:
 finally we can build our final app lib and link all the libs together!
 
 	# --- ADD LIBS: build main app lib
-	# now build app's shared lib
-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11 -Wall -Werror")
-	
 	# Export ANativeActivity_onCreate(),
 	# Refer to: https://github.com/android-ndk/ndk/issues/381.
 	set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -u ANativeActivity_onCreate")
@@ -217,8 +242,9 @@ finally we can build our final app lib and link all the libs together!
 	# Provides a relative path to your source file(s).
 	# Associated headers in the same location as their source
 	# file are automatically included.
-	add_library(my-app SHARED main.cpp)
-	
+	add_library(my-app SHARED 
+		main.cpp
+		)
 	
 	# --- TARGET
 	target_include_directories(my-app PRIVATE
@@ -244,15 +270,15 @@ finally we can build our final app lib and link all the libs together!
 	    sfml-window
 	    sfml-graphics
 	    sfml-activity
-	
+	    
+		# neat one, thanks Alia5
 	    -Wl,--whole-archive sfml-main -Wl,--no-whole-archive
 	    )
 	
 now you can use SFML in your `main.cpp` file.
 
-sync, build, run, enjoy.
+sync, build, run, *pray* and enjoy.
 
 Lio 
 
 Visit <http://movo-design.com> to see my game TacWars on OSX,IOS and very soon Android.
-
