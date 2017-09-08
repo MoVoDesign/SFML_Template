@@ -141,8 +141,9 @@ Before doing anything here, copy the **sfml libs** inside your project.
 or even better, create som symbolic links to the libs in `$SFML`
 
 	cd $YOUR_PROJECT
-	ln -s $SFML/lib lib
-	ln -s $SFML/include include 
+	mkdir sfml
+	ln -s $SFML/lib sfml/lib
+	ln -s $SFML/include sfml/include 
 
 Your project folder should look like this:
 
