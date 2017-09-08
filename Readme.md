@@ -81,7 +81,8 @@ we'll have to change 3 files to make it work:
 #### AndroidManifest.xml
 
 you'll find it in `Project/app/manifests/`. Change your **App Bundle name** in `<manifest package="my.app.bundle">` to whatever you'd like it to be.
-now the really important bit is in the `<application>` tag. You want to tell NativeActivity to use the **sfml-activity**. To do so, change `android:value="native-activity"` to `android:value="sfml-activity"`.
+
+Now the really important bit is in the `<application>` tag. You want to tell NativeActivity to use the **sfml-activity**. To do so, change `android:value="native-activity"` to `android:value="sfml-activity"`.
 
 Then you want to tell SFMLActivity where to find `int main(int argc, char *argv[])`. to do so add a new `<meta-data>` tag after the previous one like this:
 
@@ -135,20 +136,28 @@ here's a complete example for your reference:
 
 ## build.gradle (Module: app)
 
-Before doing anything here, copy the **sfml libs** inside your project. Android Studio seems a bit *daft* about it. Your project folder should look like this:
+Before doing anything here, copy the **sfml libs** inside your project. 
+
+or even better, create som symbolic links to the libs in `$SFML`
+
+	cd $YOUR_PROJECT
+	ln -s $SFML/lib lib
+	ln -s $SFML/include include 
+
+Your project folder should look like this:
 
 	StudioProjects/MyProject/
 		app/
 		build/
 		gradle/
 		sfml/
-			include/
+			include/	# this is a link
 				FLAC/stuff.h
 				...
 				SFML/
 				...
 				Vorbis/
-			lib/
+			lib/ # this is a link
 				armeabi/stuff.so
 				armeabi-v7a/
 				x86/
