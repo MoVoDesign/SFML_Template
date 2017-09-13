@@ -16,8 +16,8 @@
 
 cmake_minimum_required(VERSION 3.4.1)
 
-set(${CMAKE_C_FLAGS}, "${CMAKE_C_FLAGS}")
-set(${CMAKE_CPP_FLAGS}, "${CMAKE_CPP_FLAGS}")
+#set(${CMAKE_C_FLAGS}, "${CMAKE_C_FLAGS}")
+#set(${CMAKE_CPP_FLAGS}, "${CMAKE_CPP_FLAGS}")
 
 set(sfml_dir ${CMAKE_SOURCE_DIR}/../../../../sfml)
 set(sfml_lib ${sfml_dir}/lib/${ANDROID_ABI})
@@ -58,8 +58,6 @@ set_target_properties(openal PROPERTIES IMPORTED_LOCATION ${sfml_lib}/libopenal.
 
 # --- ADD LIBS: build main app lib
 # now build app's shared lib
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11 -Wall -Werror")
-
 # Export ANativeActivity_onCreate(),
 # Refer to: https://github.com/android-ndk/ndk/issues/381.
 set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -u ANativeActivity_onCreate")
@@ -72,7 +70,8 @@ set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -u ANativeActivity_o
 # Provides a relative path to your source file(s).
 # Associated headers in the same location as their source
 # file are automatically included.
-add_library(my-app SHARED main.cpp)
+add_library(my-app SHARED main.cpp
+    test.cpp)
 
 
 # --- TARGET

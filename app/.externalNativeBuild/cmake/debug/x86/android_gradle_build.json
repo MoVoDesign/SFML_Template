@@ -21,8 +21,14 @@
 			[
 				
 				{
-					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=/Users/lio/Library/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/lio/Library/Android/sdk/ndk-bundle/sysroot  -Dmy_app_EXPORTS -I/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/../../../../sfml/include -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sources/cxx-stl/stlport/stlport -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gabi++/include  -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=14 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security   -std=gnu++11 -Wall -Werror -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=/Users/lio/Library/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/lio/Library/Android/sdk/ndk-bundle/sysroot  -Dmy_app_EXPORTS -I/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/../../../../sfml/include -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sources/android/support/include -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include  -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -fexceptions -frtti -O0 -fno-limit-debug-info  -fPIC    -c ",
 					"src" : "/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/main.cpp",
+					"workingDirectory" : "/Users/lio/StudioProjects/SFML_Template/app/.externalNativeBuild/cmake/debug/x86"
+				},
+				
+				{
+					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=/Users/lio/Library/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/lio/Library/Android/sdk/ndk-bundle/sysroot  -Dmy_app_EXPORTS -I/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/../../../../sfml/include -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sources/android/support/include -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include  -isystem /Users/lio/Library/Android/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -fexceptions -frtti -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/Users/lio/StudioProjects/SFML_Template/app/src/main/cpp/test.cpp",
 					"workingDirectory" : "/Users/lio/StudioProjects/SFML_Template/app/.externalNativeBuild/cmake/debug/x86"
 				}
 			],

@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId = 'sfml.example.myappname' // same as in AndroidManifest.xml
-        minSdkVersion 14
+        minSdkVersion 15
         targetSdkVersion  25
         ndk {
             abiFilters 'x86', 'armeabi', 'armeabi-v7a' //, 'arm64-v8a', 'x86_64',
@@ -16,8 +16,9 @@ android {
         // developer.android.com/ndk/guides/cmake.html#variables
         externalNativeBuild {
             cmake {
-                arguments '-DANDROID_PLATFORM=android-14',
-                        '-DANDROID_TOOLCHAIN=clang', '-DANDROID_STL=stlport_shared'
+                cppFlags "-std=c++11 -fexceptions -frtti"
+                arguments '-DANDROID_STL=c++_shared'
+                //arguments '-DANDROID_PLATFORM=android-14', '-DANDROID_TOOLCHAIN=clang', '-DANDROID_STL=stlport_shared'
                 //abiFilters ''
             }
         }

@@ -9,9 +9,8 @@ arguments :
 -DCMAKE_BUILD_TYPE=Debug
 -DCMAKE_MAKE_PROGRAM=/Users/lio/Library/Android/sdk/cmake/3.6.4111459/bin/ninja
 -DCMAKE_TOOLCHAIN_FILE=/Users/lio/Library/Android/sdk/ndk-bundle/build/cmake/android.toolchain.cmake
--DANDROID_PLATFORM=android-14
--DANDROID_PLATFORM=android-14
--DANDROID_TOOLCHAIN=clang
--DANDROID_STL=stlport_shared
+-DANDROID_PLATFORM=android-15
+-DCMAKE_CXX_FLAGS=-std=c++11 -fexceptions -frtti
+-DANDROID_STL=c++_shared
 jvmArgs : 
 

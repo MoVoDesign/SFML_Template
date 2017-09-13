@@ -3,3 +3,15 @@
 //
 
 #include "Test.h"
+
+
+namespace mvd {
+
+  int Test::weird()
+  {
+    return m_x * 8 + m_y % 8;
+  }
+
+
+
+}

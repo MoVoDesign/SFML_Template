@@ -27,7 +27,7 @@ You'll find here the detailled steps to **build SFML** and use it in an **Androi
 ### create the *x86* libs
 
 - create an architecture folder `mkdir x86` (to use the emulator) and go there `cd x86`
-- create the makefile using cmake `	cmake -DANDROID_ABI=x86 -DCMAKE_TOOLCHAIN_FILE=$SFML/cmake/toolchains/android.toolchain.cmake -DANDROID_NDK=$HOME/Library/Android/ndk_r12b -DCMAKE_FIND_FRAMEWORK="NEVER" -DANDROID_STL=c++_shared $SFML`
+- create the makefile using cmake `	cmake -DANDROID_ABI=x86 -DCMAKE_TOOLCHAIN_FILE=$SFML/cmake/toolchains/android.toolchain.cmake -DANDROID_NDK=$HOME/Library/Android/ndk_r12b -DCMAKE_FIND_FRAMEWORK="NEVER" -DANDROID_STL=c++_shared -DCMAKE_BUILD_TYPE=Debug $SFML`
 - build SFML libs for architecture **x86** `make`
 
 ### create the *armeabiXXXX* libs

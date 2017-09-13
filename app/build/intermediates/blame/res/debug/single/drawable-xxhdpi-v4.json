@@ -76,12 +76,12 @@
         "source": "/Users/lio/.android/build-cache/e243890623a5bffd1b0ca5c046c050a56e054924/output/res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
-        "merged": "/Users/lio/StudioProjects/SFML_Template/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_000.png",
-        "source": "/Users/lio/.android/build-cache/e243890623a5bffd1b0ca5c046c050a56e054924/output/res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_000.png"
-    },
-    {
         "merged": "/Users/lio/StudioProjects/SFML_Template/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_star_half_black_16dp.png",
         "source": "/Users/lio/.android/build-cache/e243890623a5bffd1b0ca5c046c050a56e054924/output/res/drawable-xxhdpi-v4/abc_ic_star_half_black_16dp.png"
+    },
+    {
+        "merged": "/Users/lio/StudioProjects/SFML_Template/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_000.png",
+        "source": "/Users/lio/.android/build-cache/e243890623a5bffd1b0ca5c046c050a56e054924/output/res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_000.png"
     },
     {
         "merged": "/Users/lio/StudioProjects/SFML_Template/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_scrubber_control_off_mtrl_alpha.png",

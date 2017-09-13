@@ -21,13 +21,10 @@ ANDROID_ABI:UNINITIALIZED=armeabi
 ANDROID_NDK:UNINITIALIZED=/Users/lio/Library/Android/sdk/ndk-bundle
 
 //No help, variable specified on the command line.
-ANDROID_PLATFORM:UNINITIALIZED=android-14
+ANDROID_PLATFORM:UNINITIALIZED=android-15
 
 //No help, variable specified on the command line.
-ANDROID_STL:UNINITIALIZED=stlport_shared
-
-//No help, variable specified on the command line.
-ANDROID_TOOLCHAIN:UNINITIALIZED=clang
+ANDROID_STL:UNINITIALIZED=c++_shared
 
 //Archiver
 CMAKE_AR:FILEPATH=/Users/lio/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-ar
@@ -46,7 +43,7 @@ CMAKE_ASM_FLAGS_RELEASE:STRING=
 CMAKE_BUILD_TYPE:STRING=Debug
 
 //Flags used by the compiler during all build types.
-CMAKE_CXX_FLAGS:STRING=
+CMAKE_CXX_FLAGS:STRING=-std=c++11 -fexceptions -frtti
 
 //Flags used by the compiler during debug builds.
 CMAKE_CXX_FLAGS_DEBUG:STRING=
@@ -62,7 +59,7 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //Libraries linked by default with all C++ applications.
-CMAKE_CXX_STANDARD_LIBRARIES:STRING=-lm "/Users/lio/Library/Android/sdk/ndk-bundle/sources/cxx-stl/stlport/libs/armeabi/libstlport_shared.so" "-latomic"
+CMAKE_CXX_STANDARD_LIBRARIES:STRING=-lm "/Users/lio/Library/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/libs/armeabi/libc++.so" "-latomic"
 
 //Flags used by the compiler during all build types.
 CMAKE_C_FLAGS:STRING=

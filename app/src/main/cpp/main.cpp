@@ -1,3 +1,4 @@
+#include <memory>
 
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
@@ -6,13 +7,19 @@
 //#include <SFML/Network.hpp>
 #include <android/log.h>
 
+
+#include "Test.h"
+
 #define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "native-activity", __VA_ARGS__))
 #define LOGE(...) ((void)__android_log_print(ANDROID_LOG_ERROR, "native-activity", __VA_ARGS__))
 
 
 int main(int argc, char *argv[]) {
 
-  sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "OMG!!!");
+  std::vector<int> vi;
+  std::unique_ptr<sf::RenderWindow> upW(new sf::RenderWindow(sf::VideoMode::getDesktopMode(), "OMG!!!"));
+  //sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "OMG!!!");
+  sf::RenderWindow& window = *upW;
 
   sf::Texture texture;
   if (!texture.loadFromFile("image.png")) {

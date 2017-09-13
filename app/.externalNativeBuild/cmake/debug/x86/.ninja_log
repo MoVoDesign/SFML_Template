@@ -1,3 +1,4 @@
 # ninja log v5
-0	514	0	CMakeFiles/my-app.dir/main.cpp.o	dfad837bb4c4fdd8
-515	567	0	/Users/lio/StudioProjects/SFML_Template/app/build/intermediates/cmake/debug/obj/x86/libmy-app.so	e525301e6694ef01
+0	34	0	CMakeFiles/my-app.dir/test.cpp.o	c22f8adc3f310c47
+0	682	0	CMakeFiles/my-app.dir/main.cpp.o	4c7f26a76f3ecd70
+683	908	0	/Users/lio/StudioProjects/SFML_Template/app/build/intermediates/cmake/debug/obj/x86/libmy-app.so	278d232510f1c153
